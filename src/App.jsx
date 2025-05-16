@@ -35,7 +35,7 @@ function App() {
     <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       {/* Header */}
       <div style={{ padding: '10px 20px', background: '#1e3a8a', color: '#fff' }}>
-        <h2 style={{ margin: 0, fontWeight: 'bold', fontSize: '22px' }}>brinersigns</h2>
+        <h2 style={{ margin: 0, fontWeight: 'bold', fontSize: '22px' }}>Ajit Kanabar</h2>
       </div>
 
       <div style={{ display: 'flex', flex: 1, flexDirection: 'row', flexWrap: 'wrap' }}>
@@ -50,9 +50,9 @@ function App() {
           </ul>
         </div>
 
-        {/* Main */}
+        {/* Main Content */}
         <div className="main" style={{ flex: 1, padding: '20px', maxWidth: '1000px' }}>
-          <h1>Welcome, Ajit</h1>
+          <h1>Briner Signs</h1>
           <p>This is your analytical dashboard.</p>
 
           {/* Month Dropdown */}
@@ -71,7 +71,15 @@ function App() {
           </div>
 
           {salesData.length > 0 && (
-            <>
+            <div
+              style={{
+                background: '#fff',
+                border: '1px solid #ddd',
+                borderRadius: '8px',
+                padding: '30px',
+                boxShadow: '0 2px 10px rgba(0,0,0,0.05)',
+              }}
+            >
               {/* KPI Cards */}
               <div
                 className="kpi-container"
@@ -105,15 +113,7 @@ function App() {
               </div>
 
               {/* Cost Breakdown */}
-              <div
-                style={{
-                  background: '#fff',
-                  border: '1px solid #ddd',
-                  padding: '20px',
-                  marginTop: '20px',
-                  borderRadius: '4px',
-                }}
-              >
+              <div style={{ marginBottom: '30px' }}>
                 <h3>Cost Breakdown – {selectedMonth}</h3>
                 <table style={{ width: '100%', borderCollapse: 'collapse' }}>
                   <thead>
@@ -139,9 +139,8 @@ function App() {
                 weeklyData={current.weekly}
                 productData={current.products}
               />
-
               <GrossProfitChart data={salesData} />
-            </>
+            </div>
           )}
         </div>
       </div>
@@ -154,6 +153,8 @@ const cardStyle = {
   padding: '20px',
   border: '1px solid #ddd',
   flex: '1 1 200px',
+  borderRadius: '6px',
+  boxShadow: '2px 2px 5px rgba(0,0,0,0.05)',
 };
 
 const thStyle = {
