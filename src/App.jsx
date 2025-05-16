@@ -1,172 +1,152 @@
+import React, { useEffect, useState } from 'react';
 import './App.css';
-import { useEffect, useState } from 'react';
-import ChartSection from './ChartSection';
-import GrossProfitChart from './GrossProfitChart';
+import {
+  LineChart, Line,
+  BarChart, Bar,
+  AreaChart, Area,
+  PieChart, Pie, Cell,
+  Tooltip, ResponsiveContainer,
+  XAxis, YAxis, Legend
+} from 'recharts';
 
 function App() {
-  const [salesData, setSalesData] = useState([]);
+  const [data, setData] = useState(null);
   const [selectedMonth, setSelectedMonth] = useState('January');
 
   useEffect(() => {
     fetch('/data.json')
-      .then((res) => res.json())
-      .then((data) => setSalesData(data.sales))
-      .catch((err) => console.error('Failed to load data.json:', err));
+      .then(res => res.json())
+      .then(json => setData(json.sales))
+      .catch(console.error);
   }, []);
 
-  const current =
-    salesData.find((entry) => entry.month === selectedMonth) || {
-      weekly: [],
-      total: 0,
-      customers: 0,
-      costs: {},
-      products: [],
-      marginPercent: 45,
-    };
+  const selected = data?.find(entry => entry.month === selectedMonth);
+  const totalCost = selected ? Object.values(selected.costs).reduce((a, b) => a + b, 0) : 0;
+  const grossProfit = selected ? selected.total - totalCost : 0;
+  const marginPct = selected ? (grossProfit / selected.total) * 100 : 0;
 
-  const totalCost = current.costs
-    ? Object.values(current.costs).reduce((sum, val) => sum + val, 0)
-    : 0;
+  const pieData = selected?.products.map((value, i) => ({
+    name: `Product ${String.fromCharCode(65 + i)}`,
+    value
+  }));
 
-  const grossProfit = current.total - totalCost;
-  const margin = current.total > 0 ? (grossProfit / current.total) * 100 : 0;
+  const barData = Object.entries(selected?.costs || {}).map(([type, amt]) => ({ type, amt }));
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-      {/* Header */}
-      <div style={{ padding: '10px 20px', background: '#1e3a8a', color: '#fff' }}>
-        <h2 style={{ margin: 0, fontWeight: 'bold', fontSize: '22px' }}>Ajit Kanabar</h2>
-      </div>
+    <div style={{ fontFamily: 'sans-serif', backgroundColor: '#f9f9fb', minHeight: '100vh' }}>
+      <header style={{ backgroundColor: '#0B2C4D', padding: '15px 30px', color: 'white', fontSize: '20px' }}>
+        brinersigns
+      </header>
 
-      <div style={{ display: 'flex', flex: 1, flexDirection: 'row', flexWrap: 'wrap' }}>
+      <div style={{ display: 'flex' }}>
         {/* Sidebar */}
-        <div className="sidebar" style={{ width: '220px', background: '#f3f4f6', padding: '20px' }}>
+        <aside style={{
+          width: '200px', backgroundColor: '#102841', color: 'white',
+          padding: '20px', height: '100vh'
+        }}>
           <h3>📊 Dashboard</h3>
-          <ul style={{ listStyle: 'none', padding: 0 }}>
-            <li><a href="#">Overview</a></li>
-            <li><a href="#">Sales</a></li>
-            <li><a href="#">Customers</a></li>
-            <li><a href="#">Reports</a></li>
-          </ul>
-        </div>
+          <nav>
+            <p>Overview</p>
+            <p>Sales</p>
+            <p>Customers</p>
+            <p>Reports</p>
+          </nav>
+        </aside>
 
-        {/* Main Content */}
-        <div className="main" style={{ flex: 1, padding: '20px', maxWidth: '1000px' }}>
-          <h1>Briner Signs</h1>
+        {/* Main */}
+        <main style={{ flex: 1, padding: '30px' }}>
+          <h1 style={{ marginBottom: 5 }}>Welcome, Ajit</h1>
           <p>This is your analytical dashboard.</p>
 
-          {/* Month Dropdown */}
-          <div style={{ marginBottom: '20px' }}>
-            <label>Select Month: </label>
+          <div style={{ margin: '20px 0' }}>
+            <label><strong>Select Month:</strong></label>
             <select
               value={selectedMonth}
-              onChange={(e) => setSelectedMonth(e.target.value)}
+              onChange={e => setSelectedMonth(e.target.value)}
+              style={{ marginLeft: '10px', padding: '5px' }}
             >
-              {salesData.map((entry) => (
-                <option key={entry.month} value={entry.month}>
-                  {entry.month}
-                </option>
+              {data?.map(d => (
+                <option key={d.month}>{d.month}</option>
               ))}
             </select>
           </div>
 
-          {salesData.length > 0 && (
-            <div
-              style={{
-                background: '#fff',
-                border: '1px solid #ddd',
-                borderRadius: '8px',
-                padding: '30px',
-                boxShadow: '0 2px 10px rgba(0,0,0,0.05)',
-              }}
-            >
-              {/* KPI Cards */}
-              <div
-                className="kpi-container"
-                style={{
-                  display: 'flex',
-                  gap: '20px',
-                  marginBottom: '30px',
-                  flexWrap: 'wrap',
-                }}
-              >
-                <div className="kpi-card" style={cardStyle}>
-                  <h3>Total Sales</h3>
-                  <p>${current.total.toLocaleString()}</p>
-                </div>
-                <div className="kpi-card" style={cardStyle}>
-                  <h3>Customers</h3>
-                  <p>{current.customers}</p>
-                </div>
-                <div className="kpi-card" style={cardStyle}>
-                  <h3>Total Cost</h3>
-                  <p>${totalCost.toLocaleString()}</p>
-                </div>
-                <div className="kpi-card" style={cardStyle}>
-                  <h3>Gross Profit</h3>
-                  <p>${grossProfit.toLocaleString()}</p>
-                </div>
-                <div className="kpi-card" style={cardStyle}>
-                  <h3>Margin %</h3>
-                  <p>{margin.toFixed(1)}%</p>
-                </div>
-              </div>
+          {/* Top Metric Cards */}
+          <div style={{
+            display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)',
+            gap: '20px', marginBottom: '30px'
+          }}>
+            <div className="card"><strong>Total Sales</strong><div>${selected?.total?.toLocaleString()}</div></div>
+            <div className="card"><strong>Customers</strong><div>{selected?.customers}</div></div>
+            <div className="card"><strong>Total Cost</strong><div>${totalCost?.toLocaleString()}</div></div>
+            <div className="card"><strong>Gross Profit</strong><div>${grossProfit?.toLocaleString()}</div></div>
+            <div className="card"><strong>Margin %</strong><div>{marginPct.toFixed(1)}%</div></div>
+          </div>
 
-              {/* Cost Breakdown */}
-              <div style={{ marginBottom: '30px' }}>
-                <h3>Cost Breakdown – {selectedMonth}</h3>
-                <table style={{ width: '100%', borderCollapse: 'collapse' }}>
-                  <thead>
-                    <tr style={{ background: '#f3f4f6' }}>
-                      <th style={thStyle}>Cost Type</th>
-                      <th style={{ ...thStyle, textAlign: 'right' }}>Amount</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {Object.entries(current.costs || {}).map(([key, value]) => (
-                      <tr key={key}>
-                        <td style={tdStyle}>{key}</td>
-                        <td style={{ ...tdStyle, textAlign: 'right' }}>${value.toLocaleString()}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-
-              {/* Charts */}
-              <ChartSection
-                selectedMonth={selectedMonth}
-                weeklyData={current.weekly}
-                productData={current.products}
-              />
-              <GrossProfitChart data={salesData} />
+          {/* Charts */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '30px' }}>
+            {/* Line Chart: Weekly Sales */}
+            <div className="chart-card">
+              <h4>Weekly Sales Trend</h4>
+              <ResponsiveContainer width="100%" height={200}>
+                <LineChart data={selected?.weekly.map((val, idx) => ({ week: `W${idx + 1}`, val }))}>
+                  <XAxis dataKey="week" />
+                  <YAxis />
+                  <Tooltip />
+                  <Line type="monotone" dataKey="val" stroke="#3E9BFF" strokeWidth={2} />
+                </LineChart>
+              </ResponsiveContainer>
             </div>
-          )}
-        </div>
+
+            {/* Bar Chart: Cost Breakdown */}
+            <div className="chart-card">
+              <h4>Cost Breakdown</h4>
+              <ResponsiveContainer width="100%" height={200}>
+                <BarChart data={barData}>
+                  <XAxis dataKey="type" />
+                  <YAxis />
+                  <Tooltip />
+                  <Bar dataKey="amt" fill="#8884d8" />
+                </BarChart>
+              </ResponsiveContainer>
+            </div>
+
+            {/* Area Chart: Gross Profit Trend */}
+            <div className="chart-card">
+              <h4>Profit vs Cost</h4>
+              <ResponsiveContainer width="100%" height={200}>
+                <AreaChart data={[
+                  { name: 'Sales', value: selected?.total },
+                  { name: 'Cost', value: totalCost },
+                  { name: 'Profit', value: grossProfit }
+                ]}>
+                  <XAxis dataKey="name" />
+                  <YAxis />
+                  <Tooltip />
+                  <Area dataKey="value" stroke="#82ca9d" fill="#82ca9d" />
+                </AreaChart>
+              </ResponsiveContainer>
+            </div>
+
+            {/* Pie Chart: Product Mix */}
+            <div className="chart-card">
+              <h4>Product Mix</h4>
+              <ResponsiveContainer width="100%" height={200}>
+                <PieChart>
+                  <Pie data={pieData} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={60}>
+                    {pieData?.map((_, index) => (
+                      <Cell key={index} fill={['#0088FE', '#00C49F', '#FFBB28'][index % 3]} />
+                    ))}
+                  </Pie>
+                  <Tooltip />
+                </PieChart>
+              </ResponsiveContainer>
+            </div>
+          </div>
+        </main>
       </div>
     </div>
   );
 }
-
-const cardStyle = {
-  background: '#fff',
-  padding: '20px',
-  border: '1px solid #ddd',
-  flex: '1 1 200px',
-  borderRadius: '6px',
-  boxShadow: '2px 2px 5px rgba(0,0,0,0.05)',
-};
-
-const thStyle = {
-  padding: '8px',
-  borderBottom: '1px solid #ddd',
-  textAlign: 'left',
-};
-
-const tdStyle = {
-  padding: '8px',
-  borderBottom: '1px solid #eee',
-  textTransform: 'capitalize',
-};
 
 export default App;
