@@ -4,7 +4,6 @@ import ChartSection from './ChartSection';
 import GrossProfitChart from './GrossProfitChart';
 import TopSummarySection from './TopSummarySection';
 
-
 function App() {
   const [salesData, setSalesData] = useState([]);
   const [selectedMonth, setSelectedMonth] = useState('January');
@@ -12,10 +11,7 @@ function App() {
   useEffect(() => {
     fetch('/data.json')
       .then((res) => res.json())
-      .then((data) => {
-        console.log("📊 Loaded Months:", data.sales.map(m => m.month));
-        setSalesData(data.sales);
-      });
+      .then((data) => setSalesData(data.sales));
   }, []);
 
   const current = salesData.find(entry => entry.month === selectedMonth) || {
@@ -35,7 +31,7 @@ function App() {
     <div style={{ display: 'flex', height: '100%', minHeight: '100vh' }}>
       {/* Sidebar */}
       <div className="sidebar" style={{ width: '220px', background: '#f3f4f6', padding: '20px' }}>
-        <h2>📊 Dashboard</h2>
+        <h2 style={{ fontSize: '22px', color: '#1e3a8a', textTransform: 'lowercase', fontWeight: 'bold' }}>brinersigns</h2>
         <ul style={{ listStyle: 'none', padding: 0 }}>
           <li><a href="#">Overview</a></li>
           <li><a href="#">Sales</a></li>
@@ -44,12 +40,10 @@ function App() {
         </ul>
       </div>
 
-      {/* Main */}
+      {/* Main Content */}
       <div className="main" style={{ flex: 1, padding: '20px' }}>
-        <h1>Welcome, Ajit</h1>
+        <h1>briner signs</h1>
         <p>This is your analytical dashboard.</p>
-        <TopSummarySection data={salesData} current={{ ...current, month: selectedMonth }} />
-
 
         {/* Month Dropdown */}
         <div style={{ marginBottom: '20px' }}>
@@ -66,42 +60,21 @@ function App() {
           </select>
         </div>
 
-        {/* KPI + Chart side by side */}
-        <div style={{ display: 'flex', gap: '30px', marginBottom: '30px', alignItems: 'flex-start' }}>
-          {/* KPI Cards - smaller with 3D style */}
-          <div className="kpi-container" style={{ display: 'flex', flexDirection: 'column', gap: '16px', minWidth: '240px' }}>
-            {[
-              { label: "Total Sales", value: `$${current.total.toLocaleString()}` },
-              { label: "Customers", value: current.customers },
-              { label: "Total Cost", value: `$${totalCost.toLocaleString()}` },
-              { label: "Gross Profit", value: `$${grossProfit.toLocaleString()}` },
-              { label: "Margin %", value: `${margin.toFixed(1)}%` },
-            ].map((item, idx) => (
-              <div
-                key={idx}
-                style={{
-                  background: '#fff',
-                  padding: '14px 16px',
-                  borderRadius: '8px',
-                  boxShadow: '2px 4px 12px rgba(0, 0, 0, 0.1)',
-                  border: '1px solid #e5e7eb',
-                  fontSize: '14px'
-                }}
-              >
-                <h4 style={{ margin: '0 0 6px', fontSize: '14px', color: '#374151' }}>{item.label}</h4>
-                <p style={{ margin: 0, fontWeight: 'bold', fontSize: '16px' }}>{item.value}</p>
-              </div>
-            ))}
-          </div>
+        {/* Summary Cards with Top Charts */}
+        <TopSummarySection
+          total={current.total}
+          totalCost={totalCost}
+          grossProfit={grossProfit}
+          margin={margin}
+        />
 
-          {/* Chart Section */}
-          <div style={{ flex: 1 }}>
-            <ChartSection
-              selectedMonth={selectedMonth}
-              weeklyData={current.weekly}
-              productData={current.products}
-            />
-          </div>
+        {/* KPI Cards */}
+        <div className="kpi-container" style={{ display: 'flex', gap: '20px', marginBottom: '30px', flexWrap: 'wrap' }}>
+          <div className="kpi-card" style={cardStyle}><h3>Total Sales</h3><p>${current.total.toLocaleString()}</p></div>
+          <div className="kpi-card" style={cardStyle}><h3>Customers</h3><p>{current.customers}</p></div>
+          <div className="kpi-card" style={cardStyle}><h3>Total Cost</h3><p>${totalCost.toLocaleString()}</p></div>
+          <div className="kpi-card" style={cardStyle}><h3>Gross Profit</h3><p>${grossProfit.toLocaleString()}</p></div>
+          <div className="kpi-card" style={cardStyle}><h3>Margin %</h3><p>{margin.toFixed(1)}%</p></div>
         </div>
 
         {/* Cost Breakdown Table */}
@@ -125,7 +98,12 @@ function App() {
           </table>
         </div>
 
-        {/* Gross Profit Line Chart */}
+        {/* Charts */}
+        <ChartSection
+          selectedMonth={selectedMonth}
+          weeklyData={current.weekly}
+          productData={current.products}
+        />
         <GrossProfitChart data={salesData} />
       </div>
     </div>
@@ -133,6 +111,15 @@ function App() {
 }
 
 // === Styles ===
+const cardStyle = {
+  background: '#fff',
+  padding: '20px',
+  border: '1px solid #ddd',
+  borderRadius: '10px',
+  boxShadow: '0 2px 5px rgba(0,0,0,0.1)',
+  flex: '1 1 200px',
+};
+
 const thStyle = {
   padding: '8px',
   borderBottom: '1px solid #ddd',
