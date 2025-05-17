@@ -1,0 +1,39 @@
+.charts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.card {
+  border-radius: 12px;
+  padding: 20px;
+  width: 320px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  color: white;
+}
+
+.card-blue {
+  background: #3b82f6;
+}
+
+.card-green {
+  background: #10b981;
+}
+
+.card-purple {
+  background: #8b5cf6;
+}
+
+.card-teal {
+  background: #14b8a6;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 20px;
+  margin: 0 0 15px;
+}

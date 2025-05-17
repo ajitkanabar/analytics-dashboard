@@ -1,67 +1,41 @@
 body {
   margin: 0;
-  font-family: 'Segoe UI', 'Inter', sans-serif;
-  background-color: #f9fafb;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9fafb;
   color: #111827;
+}
+
+.container {
+  display: flex;
 }
 
 .sidebar {
   width: 220px;
-  background: #ffffff;
+  background: #0f172a;
+  color: white;
   padding: 20px;
-  border-right: 1px solid #e5e7eb;
 }
 
-.sidebar h2 {
-  margin-top: 0;
-  font-size: 20px;
-  color: #2563eb;
+.sidebar h1 {
+  font-size: 24px;
+  margin-bottom: 30px;
 }
 
 .sidebar ul {
+  padding-left: 0;
   list-style: none;
-  padding: 0;
 }
 
-.sidebar ul li {
+.sidebar li {
   margin-bottom: 10px;
 }
 
-.sidebar ul li a {
+.sidebar a {
+  color: #cbd5e1;
   text-decoration: none;
-  color: #6b7280;
-  font-weight: 500;
-}
-
-.sidebar ul li a:hover {
-  color: #2563eb;
 }
 
 .main {
   flex: 1;
-  padding: 40px;
-}
-
-.kpi-container {
-  display: flex;
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.kpi-card {
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-radius: 8px;
-  padding: 20px;
-  flex: 1;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-}
-
-.chart-panel {
-  margin-top: 40px;
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-radius: 8px;
   padding: 30px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
