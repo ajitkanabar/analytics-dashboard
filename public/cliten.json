@@ -1,0 +1,994 @@
+{
+  "clients": [
+    {
+      "agency": "Jellis Craig",
+      "suburb": "Richmond",
+      "monthlySpend": {
+        "January": 110419,
+        "February": 97788,
+        "March": 88239,
+        "April": 106372,
+        "May": 98307,
+        "June": 111978,
+        "July": 94663,
+        "August": 89450,
+        "September": 88786,
+        "October": 103730,
+        "November": 102561,
+        "December": 106365
+      }
+    },
+    {
+      "agency": "Ray White",
+      "suburb": "Toorak",
+      "monthlySpend": {
+        "January": 59692,
+        "February": 58329,
+        "March": 61021,
+        "April": 52037,
+        "May": 62731,
+        "June": 65410,
+        "July": 61828,
+        "August": 63923,
+        "September": 63069,
+        "October": 54093,
+        "November": 58290,
+        "December": 54332
+      }
+    },
+    {
+      "agency": "Barry Plant",
+      "suburb": "Elwood",
+      "monthlySpend": {
+        "January": 73190,
+        "February": 72354,
+        "March": 65209,
+        "April": 72594,
+        "May": 77902,
+        "June": 71426,
+        "July": 66490,
+        "August": 83644,
+        "September": 64586,
+        "October": 81613,
+        "November": 65167,
+        "December": 65241
+      }
+    },
+    {
+      "agency": "Buxton",
+      "suburb": "Brunswick",
+      "monthlySpend": {
+        "January": 48576,
+        "February": 45172,
+        "March": 45573,
+        "April": 45242,
+        "May": 42151,
+        "June": 39387,
+        "July": 42470,
+        "August": 46624,
+        "September": 47756,
+        "October": 49326,
+        "November": 47367,
+        "December": 50663
+      }
+    },
+    {
+      "agency": "Marshall White",
+      "suburb": "Prahran",
+      "monthlySpend": {
+        "January": 38675,
+        "February": 41422,
+        "March": 36988,
+        "April": 42379,
+        "May": 37128,
+        "June": 35719,
+        "July": 44670,
+        "August": 38868,
+        "September": 43665,
+        "October": 41376,
+        "November": 44207,
+        "December": 44667
+      }
+    },
+    {
+      "agency": "RT Edgar",
+      "suburb": "Glen Waverley",
+      "monthlySpend": {
+        "January": 76325,
+        "February": 77501,
+        "March": 74889,
+        "April": 76044,
+        "May": 77123,
+        "June": 77910,
+        "July": 63230,
+        "August": 68627,
+        "September": 79433,
+        "October": 82948,
+        "November": 70345,
+        "December": 66598
+      }
+    },
+    {
+      "agency": "Hockingstuart",
+      "suburb": "Brunswick",
+      "monthlySpend": {
+        "January": 59810,
+        "February": 49739,
+        "March": 61243,
+        "April": 65198,
+        "May": 50119,
+        "June": 57636,
+        "July": 54993,
+        "August": 56320,
+        "September": 51244,
+        "October": 53887,
+        "November": 54105,
+        "December": 64677
+      }
+    },
+    {
+      "agency": "Nelson Alexander",
+      "suburb": "Doncaster",
+      "monthlySpend": {
+        "January": 28507,
+        "February": 22925,
+        "March": 27519,
+        "April": 22114,
+        "May": 22358,
+        "June": 25131,
+        "July": 24984,
+        "August": 26388,
+        "September": 24909,
+        "October": 23385,
+        "November": 25662,
+        "December": 24379
+      }
+    },
+    {
+      "agency": "Biggin & Scott",
+      "suburb": "Doncaster",
+      "monthlySpend": {
+        "January": 40624,
+        "February": 39639,
+        "March": 38874,
+        "April": 36346,
+        "May": 35329,
+        "June": 44166,
+        "July": 33411,
+        "August": 35143,
+        "September": 43714,
+        "October": 41655,
+        "November": 41618,
+        "December": 36126
+      }
+    },
+    {
+      "agency": "OBrien Real Estate",
+      "suburb": "Doncaster",
+      "monthlySpend": {
+        "January": 20490,
+        "February": 20079,
+        "March": 18225,
+        "April": 20706,
+        "May": 18846,
+        "June": 20867,
+        "July": 21540,
+        "August": 19609,
+        "September": 19873,
+        "October": 21995,
+        "November": 20114,
+        "December": 20258
+      }
+    },
+    {
+      "agency": "Noel Jones",
+      "suburb": "Oakleigh",
+      "monthlySpend": {
+        "January": 41437,
+        "February": 41408,
+        "March": 43062,
+        "April": 39516,
+        "May": 35839,
+        "June": 34692,
+        "July": 38386,
+        "August": 44179,
+        "September": 41952,
+        "October": 44552,
+        "November": 45618,
+        "December": 35510
+      }
+    },
+    {
+      "agency": "McGrath",
+      "suburb": "Toorak",
+      "monthlySpend": {
+        "January": 24863,
+        "February": 27655,
+        "March": 27131,
+        "April": 26095,
+        "May": 25404,
+        "June": 25640,
+        "July": 25588,
+        "August": 24255,
+        "September": 27022,
+        "October": 23818,
+        "November": 27017,
+        "December": 30217
+      }
+    },
+    {
+      "agency": "Fletchers",
+      "suburb": "Prahran",
+      "monthlySpend": {
+        "January": 45943,
+        "February": 47124,
+        "March": 47074,
+        "April": 39606,
+        "May": 38447,
+        "June": 39103,
+        "July": 44330,
+        "August": 46366,
+        "September": 45015,
+        "October": 38843,
+        "November": 46529,
+        "December": 42933
+      }
+    },
+    {
+      "agency": "Greg Hocking",
+      "suburb": "Brighton",
+      "monthlySpend": {
+        "January": 61384,
+        "February": 56071,
+        "March": 64190,
+        "April": 58046,
+        "May": 59255,
+        "June": 59071,
+        "July": 63167,
+        "August": 59117,
+        "September": 50981,
+        "October": 49569,
+        "November": 55957,
+        "December": 53576
+      }
+    },
+    {
+      "agency": "Woodards",
+      "suburb": "Camberwell",
+      "monthlySpend": {
+        "January": 50935,
+        "February": 58888,
+        "March": 55417,
+        "April": 57911,
+        "May": 50948,
+        "June": 64606,
+        "July": 51298,
+        "August": 65180,
+        "September": 65022,
+        "October": 60786,
+        "November": 58884,
+        "December": 58102
+      }
+    },
+    {
+      "agency": "Kay & Burton",
+      "suburb": "Doncaster",
+      "monthlySpend": {
+        "January": 77045,
+        "February": 61993,
+        "March": 80714,
+        "April": 73437,
+        "May": 65168,
+        "June": 74157,
+        "July": 71921,
+        "August": 81764,
+        "September": 70825,
+        "October": 78599,
+        "November": 79168,
+        "December": 82296
+      }
+    },
+    {
+      "agency": "Belle Property",
+      "suburb": "Carlton",
+      "monthlySpend": {
+        "January": 55392,
+        "February": 45729,
+        "March": 56371,
+        "April": 60882,
+        "May": 53449,
+        "June": 54814,
+        "July": 50899,
+        "August": 59719,
+        "September": 51274,
+        "October": 57435,
+        "November": 55914,
+        "December": 45940
+      }
+    },
+    {
+      "agency": "Harcourts Melbourne",
+      "suburb": "Brighton",
+      "monthlySpend": {
+        "January": 59325,
+        "February": 59232,
+        "March": 63506,
+        "April": 60297,
+        "May": 57777,
+        "June": 69005,
+        "July": 71118,
+        "August": 64344,
+        "September": 55874,
+        "October": 54584,
+        "November": 65485,
+        "December": 70225
+      }
+    },
+    {
+      "agency": "Jas Stephens",
+      "suburb": "Camberwell",
+      "monthlySpend": {
+        "January": 66746,
+        "February": 60953,
+        "March": 64791,
+        "April": 71273,
+        "May": 59396,
+        "June": 60664,
+        "July": 68507,
+        "August": 68914,
+        "September": 66210,
+        "October": 69212,
+        "November": 67507,
+        "December": 66499
+      }
+    },
+    {
+      "agency": "Nicholas Scott",
+      "suburb": "Doncaster",
+      "monthlySpend": {
+        "January": 27268,
+        "February": 25524,
+        "March": 25041,
+        "April": 25047,
+        "May": 23618,
+        "June": 23884,
+        "July": 29632,
+        "August": 26016,
+        "September": 23981,
+        "October": 23284,
+        "November": 22810,
+        "December": 28823
+      }
+    },
+    {
+      "agency": "MetroKey Property",
+      "suburb": "Glen Waverley",
+      "monthlySpend": {
+        "January": 57600,
+        "February": 58627,
+        "March": 59403,
+        "April": 45884,
+        "May": 50662,
+        "June": 57527,
+        "July": 47375,
+        "August": 51301,
+        "September": 47873,
+        "October": 58566,
+        "November": 57603,
+        "December": 58210
+      }
+    },
+    {
+      "agency": "UrbanNest Realty",
+      "suburb": "Oakleigh",
+      "monthlySpend": {
+        "January": 66005,
+        "February": 65464,
+        "March": 70822,
+        "April": 61967,
+        "May": 66137,
+        "June": 62923,
+        "July": 72278,
+        "August": 66232,
+        "September": 67949,
+        "October": 63418,
+        "November": 73491,
+        "December": 66638
+      }
+    },
+    {
+      "agency": "Village Real Estate",
+      "suburb": "Carlton",
+      "monthlySpend": {
+        "January": 31418,
+        "February": 37103,
+        "March": 37470,
+        "April": 32339,
+        "May": 30573,
+        "June": 31556,
+        "July": 32985,
+        "August": 37291,
+        "September": 35825,
+        "October": 35672,
+        "November": 29166,
+        "December": 30261
+      }
+    },
+    {
+      "agency": "Sweeney Estate Agents",
+      "suburb": "South Yarra",
+      "monthlySpend": {
+        "January": 57275,
+        "February": 52338,
+        "March": 45356,
+        "April": 56839,
+        "May": 56920,
+        "June": 48175,
+        "July": 55560,
+        "August": 47985,
+        "September": 57756,
+        "October": 46047,
+        "November": 50529,
+        "December": 58391
+      }
+    },
+    {
+      "agency": "Williams Batters",
+      "suburb": "Prahran",
+      "monthlySpend": {
+        "January": 72445,
+        "February": 70205,
+        "March": 63083,
+        "April": 63669,
+        "May": 73567,
+        "June": 67695,
+        "July": 84431,
+        "August": 70764,
+        "September": 63116,
+        "October": 83026,
+        "November": 81004,
+        "December": 76831
+      }
+    },
+    {
+      "agency": "Prime Property Partners",
+      "suburb": "Elwood",
+      "monthlySpend": {
+        "January": 26356,
+        "February": 27680,
+        "March": 32496,
+        "April": 31310,
+        "May": 26367,
+        "June": 31394,
+        "July": 29115,
+        "August": 25182,
+        "September": 25838,
+        "October": 27406,
+        "November": 32543,
+        "December": 30004
+      }
+    },
+    {
+      "agency": "Blackbird & Wren",
+      "suburb": "Camberwell",
+      "monthlySpend": {
+        "January": 60402,
+        "February": 52916,
+        "March": 56095,
+        "April": 56330,
+        "May": 51776,
+        "June": 58462,
+        "July": 65185,
+        "August": 59132,
+        "September": 52910,
+        "October": 67184,
+        "November": 61641,
+        "December": 51213
+      }
+    },
+    {
+      "agency": "Chisholm & Gamon",
+      "suburb": "Camberwell",
+      "monthlySpend": {
+        "January": 53220,
+        "February": 51518,
+        "March": 56461,
+        "April": 59673,
+        "May": 53196,
+        "June": 56242,
+        "July": 60531,
+        "August": 50515,
+        "September": 65900,
+        "October": 50204,
+        "November": 58137,
+        "December": 57813
+      }
+    },
+    {
+      "agency": "Frank Gordon",
+      "suburb": "Prahran",
+      "monthlySpend": {
+        "January": 48212,
+        "February": 62623,
+        "March": 48604,
+        "April": 54405,
+        "May": 54175,
+        "June": 60494,
+        "July": 53902,
+        "August": 49010,
+        "September": 51942,
+        "October": 58970,
+        "November": 49620,
+        "December": 57700
+      }
+    },
+    {
+      "agency": "Lucas Real Estate",
+      "suburb": "Hawthorn",
+      "monthlySpend": {
+        "January": 37195,
+        "February": 39939,
+        "March": 39767,
+        "April": 43581,
+        "May": 45933,
+        "June": 44106,
+        "July": 47819,
+        "August": 41522,
+        "September": 37808,
+        "October": 37213,
+        "November": 44500,
+        "December": 47353
+      }
+    },
+    {
+      "agency": "Woodards Carlton",
+      "suburb": "Hawthorn",
+      "monthlySpend": {
+        "January": 35719,
+        "February": 42657,
+        "March": 43771,
+        "April": 37061,
+        "May": 36996,
+        "June": 38033,
+        "July": 42943,
+        "August": 38918,
+        "September": 33777,
+        "October": 40960,
+        "November": 36714,
+        "December": 43493
+      }
+    },
+    {
+      "agency": "Little Real Estate",
+      "suburb": "Prahran",
+      "monthlySpend": {
+        "January": 59799,
+        "February": 55880,
+        "March": 60481,
+        "April": 70332,
+        "May": 67571,
+        "June": 70430,
+        "July": 60832,
+        "August": 71924,
+        "September": 62902,
+        "October": 62927,
+        "November": 70990,
+        "December": 63338
+      }
+    },
+    {
+      "agency": "Kelly & Shiel",
+      "suburb": "Toorak",
+      "monthlySpend": {
+        "January": 27145,
+        "February": 22204,
+        "March": 26195,
+        "April": 27872,
+        "May": 25761,
+        "June": 24051,
+        "July": 22212,
+        "August": 26641,
+        "September": 23939,
+        "October": 26196,
+        "November": 24851,
+        "December": 26861
+      }
+    },
+    {
+      "agency": "Eview Group",
+      "suburb": "Hawthorn",
+      "monthlySpend": {
+        "January": 42534,
+        "February": 54776,
+        "March": 47122,
+        "April": 56671,
+        "May": 45968,
+        "June": 56403,
+        "July": 55928,
+        "August": 43017,
+        "September": 51337,
+        "October": 47281,
+        "November": 53756,
+        "December": 51957
+      }
+    },
+    {
+      "agency": "Gary Peer",
+      "suburb": "St Kilda",
+      "monthlySpend": {
+        "January": 32428,
+        "February": 30925,
+        "March": 28812,
+        "April": 26065,
+        "May": 27032,
+        "June": 30635,
+        "July": 28143,
+        "August": 33316,
+        "September": 25239,
+        "October": 26305,
+        "November": 28916,
+        "December": 28221
+      }
+    },
+    {
+      "agency": "Biggin & Scott Richmond",
+      "suburb": "Elwood",
+      "monthlySpend": {
+        "January": 61122,
+        "February": 62400,
+        "March": 67215,
+        "April": 66111,
+        "May": 65361,
+        "June": 79681,
+        "July": 60052,
+        "August": 63415,
+        "September": 70382,
+        "October": 78695,
+        "November": 61981,
+        "December": 75784
+      }
+    },
+    {
+      "agency": "Fletchers Canterbury",
+      "suburb": "Toorak",
+      "monthlySpend": {
+        "January": 45029,
+        "February": 50899,
+        "March": 52112,
+        "April": 56613,
+        "May": 44816,
+        "June": 43864,
+        "July": 42953,
+        "August": 44410,
+        "September": 52398,
+        "October": 56592,
+        "November": 53833,
+        "December": 56154
+      }
+    },
+    {
+      "agency": "Greg Hocking Elly Partners",
+      "suburb": "Glen Waverley",
+      "monthlySpend": {
+        "January": 60848,
+        "February": 55444,
+        "March": 64574,
+        "April": 71253,
+        "May": 70489,
+        "June": 67819,
+        "July": 71942,
+        "August": 66401,
+        "September": 69385,
+        "October": 63934,
+        "November": 56524,
+        "December": 58047
+      }
+    },
+    {
+      "agency": "Miles Real Estate",
+      "suburb": "Prahran",
+      "monthlySpend": {
+        "January": 38608,
+        "February": 30467,
+        "March": 36090,
+        "April": 34117,
+        "May": 38749,
+        "June": 36064,
+        "July": 36707,
+        "August": 31105,
+        "September": 33482,
+        "October": 40837,
+        "November": 37846,
+        "December": 35788
+      }
+    },
+    {
+      "agency": "Peter Markovic",
+      "suburb": "Richmond",
+      "monthlySpend": {
+        "January": 51375,
+        "February": 40843,
+        "March": 53469,
+        "April": 48832,
+        "May": 46129,
+        "June": 49362,
+        "July": 44647,
+        "August": 52142,
+        "September": 50770,
+        "October": 48796,
+        "November": 42364,
+        "December": 53383
+      }
+    },
+    {
+      "agency": "Besser + Co",
+      "suburb": "Carlton",
+      "monthlySpend": {
+        "January": 59480,
+        "February": 45892,
+        "March": 46984,
+        "April": 47443,
+        "May": 47628,
+        "June": 50138,
+        "July": 56281,
+        "August": 50509,
+        "September": 59959,
+        "October": 59229,
+        "November": 58451,
+        "December": 48993
+      }
+    },
+    {
+      "agency": "Nelson Alexander Fitzroy",
+      "suburb": "Hawthorn",
+      "monthlySpend": {
+        "January": 52303,
+        "February": 58203,
+        "March": 58025,
+        "April": 49257,
+        "May": 58472,
+        "June": 57644,
+        "July": 57456,
+        "August": 50565,
+        "September": 58194,
+        "October": 62865,
+        "November": 53366,
+        "December": 63234
+      }
+    },
+    {
+      "agency": "RT Edgar Boroondara",
+      "suburb": "Brighton",
+      "monthlySpend": {
+        "January": 82167,
+        "February": 64775,
+        "March": 84051,
+        "April": 80105,
+        "May": 68852,
+        "June": 67655,
+        "July": 75685,
+        "August": 76707,
+        "September": 63643,
+        "October": 82727,
+        "November": 75095,
+        "December": 77236
+      }
+    },
+    {
+      "agency": "Buxton Bentleigh",
+      "suburb": "Oakleigh",
+      "monthlySpend": {
+        "January": 47697,
+        "February": 56412,
+        "March": 50195,
+        "April": 50930,
+        "May": 54573,
+        "June": 46352,
+        "July": 50343,
+        "August": 51099,
+        "September": 49174,
+        "October": 46129,
+        "November": 57251,
+        "December": 48850
+      }
+    },
+    {
+      "agency": "Barry Plant Glenroy",
+      "suburb": "South Yarra",
+      "monthlySpend": {
+        "January": 48714,
+        "February": 37911,
+        "March": 40978,
+        "April": 43423,
+        "May": 40320,
+        "June": 42205,
+        "July": 39660,
+        "August": 39410,
+        "September": 37477,
+        "October": 39951,
+        "November": 41152,
+        "December": 44110
+      }
+    },
+    {
+      "agency": "McGrath St Kilda",
+      "suburb": "South Yarra",
+      "monthlySpend": {
+        "January": 33331,
+        "February": 34430,
+        "March": 32487,
+        "April": 27631,
+        "May": 27352,
+        "June": 34999,
+        "July": 30163,
+        "August": 33931,
+        "September": 30442,
+        "October": 26719,
+        "November": 29490,
+        "December": 30075
+      }
+    },
+    {
+      "agency": "Marshall White Bayside",
+      "suburb": "Richmond",
+      "monthlySpend": {
+        "January": 34952,
+        "February": 29482,
+        "March": 31862,
+        "April": 35097,
+        "May": 37606,
+        "June": 35864,
+        "July": 31907,
+        "August": 29068,
+        "September": 30084,
+        "October": 30354,
+        "November": 31690,
+        "December": 32726
+      }
+    },
+    {
+      "agency": "Hockingstuart Yarraville",
+      "suburb": "Doncaster",
+      "monthlySpend": {
+        "January": 37982,
+        "February": 38060,
+        "March": 44798,
+        "April": 42168,
+        "May": 41193,
+        "June": 42482,
+        "July": 43327,
+        "August": 44640,
+        "September": 48274,
+        "October": 45608,
+        "November": 45447,
+        "December": 39082
+      }
+    },
+    {
+      "agency": "Ray White Preston",
+      "suburb": "Glen Waverley",
+      "monthlySpend": {
+        "January": 44071,
+        "February": 52505,
+        "March": 46609,
+        "April": 43967,
+        "May": 40925,
+        "June": 47222,
+        "July": 44459,
+        "August": 39495,
+        "September": 39477,
+        "October": 48750,
+        "November": 49992,
+        "December": 46080
+      }
+    },
+    {
+      "agency": "Noel Jones Box Hill",
+      "suburb": "St Kilda",
+      "monthlySpend": {
+        "January": 66776,
+        "February": 53276,
+        "March": 67461,
+        "April": 56479,
+        "May": 57813,
+        "June": 61819,
+        "July": 65870,
+        "August": 61410,
+        "September": 59862,
+        "October": 59905,
+        "November": 59549,
+        "December": 60859
+      }
+    },
+    {
+      "agency": "OBrien Chelsea",
+      "suburb": "Brunswick",
+      "monthlySpend": {
+        "January": 62808,
+        "February": 69741,
+        "March": 64856,
+        "April": 71621,
+        "May": 69222,
+        "June": 82248,
+        "July": 81660,
+        "August": 76309,
+        "September": 75596,
+        "October": 68293,
+        "November": 76889,
+        "December": 83863
+      }
+    },
+    {
+      "agency": "Jellis Craig Boroondara",
+      "suburb": "St Kilda",
+      "monthlySpend": {
+        "January": 53126,
+        "February": 50068,
+        "March": 57516,
+        "April": 58276,
+        "May": 61694,
+        "June": 62621,
+        "July": 55776,
+        "August": 63438,
+        "September": 53380,
+        "October": 59115,
+        "November": 61335,
+        "December": 52488
+      }
+    },
+    {
+      "agency": "Ray White Oakleigh",
+      "suburb": "St Kilda",
+      "monthlySpend": {
+        "January": 39570,
+        "February": 39499,
+        "March": 36955,
+        "April": 40580,
+        "May": 41914,
+        "June": 40213,
+        "July": 44797,
+        "August": 43325,
+        "September": 43062,
+        "October": 40785,
+        "November": 41299,
+        "December": 46619
+      }
+    },
+    {
+      "agency": "Belle Property Albert Park",
+      "suburb": "Brighton",
+      "monthlySpend": {
+        "January": 52425,
+        "February": 61895,
+        "March": 53778,
+        "April": 54978,
+        "May": 55193,
+        "June": 57309,
+        "July": 60441,
+        "August": 57389,
+        "September": 59396,
+        "October": 50589,
+        "November": 54179,
+        "December": 61906
+      }
+    },
+    {
+      "agency": "Harcourts Northcote",
+      "suburb": "Brunswick",
+      "monthlySpend": {
+        "January": 53154,
+        "February": 64067,
+        "March": 64759,
+        "April": 61176,
+        "May": 60052,
+        "June": 59803,
+        "July": 56387,
+        "August": 56231,
+        "September": 57601,
+        "October": 63948,
+        "November": 60336,
+        "December": 52972
+      }
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+{
+  "sales": [
+    {
+      "month": "January",
+      "weekly": [150171, 150011, 149905, 150405, 150436],
+      "total": 750000,
+      "customers": 416,
+      "products": [45, 39, 67],
+      "costs": {
+        "labour": 135000,
+        "ink": 52500,
+        "maintenance": 30000,
+        "electricity": 26250,
+        "depreciation": 22500,
+        "overheads": 37500
+      },
+      "marginPercent": 45
+    },
+    {
+      "month": "February",
+      "weekly": [159771, 159642, 159752, 160262, 160074],
+      "total": 800000,
+      "customers": 529,
+      "products": [42, 33, 91],
+      "costs": {
+        "labour": 144000,
+        "ink": 56000,
+        "maintenance": 32000,
+        "electricity": 28000,
+        "depreciation": 24000,
+        "overheads": 40000
+      },
+      "marginPercent": 45
+    },
+    {
+      "month": "March",
+      "weekly": [169938, 170419, 170097, 169908, 169870],
+      "total": 850000,
+      "customers": 510,
+      "products": [32, 29, 71],
+      "costs": {
+        "labour": 153000,
+        "ink": 59500,
+        "maintenance": 34000,
+        "electricity": 29750,
+        "depreciation": 25500,
+        "overheads": 42500
+      },
+      "marginPercent": 45
+    },
+    {
+      "month": "April",
+      "weekly": [170005, 169593, 170273, 169548, 170381],
+      "total": 850000,
+      "customers": 540,
+      "products": [28, 29, 71],
+      "costs": {
+        "labour": 153000,
+        "ink": 59500,
+        "maintenance": 34000,
+        "electricity": 29750,
+        "depreciation": 25500,
+        "overheads": 42500
+      },
+      "marginPercent": 45
+    },
+    {
+      "month": "May",
+      "weekly": [159663, 160311, 160196, 159932, 160110],
+      "total": 800000,
+      "customers": 477,
+      "products": [27, 37, 91],
+      "costs": {
+        "labour": 144000,
+        "ink": 56000,
+        "maintenance": 32000,
+        "electricity": 28000,
+        "depreciation": 24000,
+        "overheads": 40000
+      },
+      "marginPercent": 45
+    },
+    {
+      "month": "June",
+      "weekly": [149559, 149960, 149648, 149710, 150123],
+      "total": 750000,
+      "customers": 420,
+      "products": [28, 32, 93],
+      "costs": {
+        "labour": 135000,
+        "ink": 52500,
+        "maintenance": 30000,
+        "electricity": 26250,
+        "depreciation": 22500,
+        "overheads": 37500
+      },
+      "marginPercent": 45
+    },
+    {
+      "month": "July",
+      "weekly": [169953, 169787, 170028, 170191, 170041],
+      "total": 850000,
+      "customers": 504,
+      "products": [29, 41, 71],
+      "costs": {
+        "labour": 153000,
+        "ink": 59500,
+        "maintenance": 34000,
+        "electricity": 29750,
+        "depreciation": 25500,
+        "overheads": 42500
+      },
+      "marginPercent": 45
+    },
+    {
+      "month": "August",
+      "weekly": [180199, 179950, 180300, 179801, 179750],
+      "total": 900000,
+      "customers": 512,
+      "products": [37, 34, 71],
+      "costs": {
+        "labour": 162000,
+        "ink": 63000,
+        "maintenance": 36000,
+        "electricity": 31500,
+        "depreciation": 27000,
+        "overheads": 45000
+      },
+      "marginPercent": 45
+    },
+    {
+      "month": "September",
+      "weekly": [169996, 169982, 169784, 170015, 169923],
+      "total": 850000,
+      "customers": 510,
+      "products": [27, 41, 71],
+      "costs": {
+        "labour": 153000,
+        "ink": 59500,
+        "maintenance": 34000,
+        "electricity": 29750,
+        "depreciation": 25500,
+        "overheads": 42500
+      },
+      "marginPercent": 45
+    },
+    {
+      "month": "October",
+      "weekly": [169893, 170020, 169754, 170312, 170021],
+      "total": 850000,
+      "customers": 490,
+      "products": [36, 30, 71],
+      "costs": {
+        "labour": 153000,
+        "ink": 59500,
+        "maintenance": 34000,
+        "electricity": 29750,
+        "depreciation": 25500,
+        "overheads": 42500
+      },
+      "marginPercent": 45
+    },
+    {
+      "month": "November",
+      "weekly": [159883, 160102, 159992, 159856, 160167],
+      "total": 800000,
+      "customers": 502,
+      "products": [39, 30, 91],
+      "costs": {
+        "labour": 144000,
+        "ink": 56000,
+        "maintenance": 32000,
+        "electricity": 28000,
+        "depreciation": 24000,
+        "overheads": 40000
+      },
+      "marginPercent": 45
+    },
+    {
+      "month": "December",
+      "weekly": [199823, 200125, 199914, 200062, 200076],
+      "total": 1000000,
+      "customers": 550,
+      "products": [35, 32, 71],
+      "costs": {
+        "labour": 180000,
+        "ink": 70000,
+        "maintenance": 40000,
+        "electricity": 35000,
+        "depreciation": 30000,
+        "overheads": 50000
+      },
+      "marginPercent": 45
+    }
+  ]
+}
