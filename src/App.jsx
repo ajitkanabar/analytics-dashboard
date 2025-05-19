@@ -1,77 +1,77 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import ClientSpendChart from './clientspendchart';
+import TopClients from './topclients';
 
 function App() {
   const [salesData, setSalesData] = useState([]);
+  const [clientData, setClientData] = useState([]);
   const [selectedMonth, setSelectedMonth] = useState('January');
   const [monthData, setMonthData] = useState(null);
 
   useEffect(() => {
     fetch('/salesdata.json')
       .then((res) => res.json())
-      .then((data) => setSalesData(data.sales));
+      .then((data) => {
+        setSalesData(data.sales);
+        const initialMonth = data.sales.find(entry => entry.month === 'January');
+        setMonthData(initialMonth);
+      });
   }, []);
 
   useEffect(() => {
-    const current = salesData.find((entry) => entry.month === selectedMonth);
-    setMonthData(current);
+    fetch('/client.json')
+      .then((res) => res.json())
+      .then((data) => setClientData(data.clients));
+  }, []);
+
+  useEffect(() => {
+    const entry = salesData.find(entry => entry.month === selectedMonth);
+    setMonthData(entry);
   }, [selectedMonth, salesData]);
 
   return (
     <div className="app">
       <aside className="sidebar">
-        <h1 className="brand">brinersigns</h1>
+        <h2>BRINERSIGNS</h2>
         <ul>
-          <li>Dashboard</li>
-          <li>Sales</li>
-          <li>Clients</li>
-          <li>Reports</li>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Overview</a></li>
+          <li><a href="#">Sales</a></li>
+          <li><a href="#">Customers</a></li>
+          <li><a href="#">Reports</a></li>
         </ul>
       </aside>
 
-      <main className="main-content">
-        <h2 className="welcome">Welcome, Ajit</h2>
-
-        <div className="month-selector">
-          <label>Select Month:</label>
+      <main className="main">
+        <h1>Welcome, Ajit</h1>
+        <p>This is your analytical dashboard.</p>
+        <label>
+          Select Month:
           <select value={selectedMonth} onChange={(e) => setSelectedMonth(e.target.value)}>
-            {salesData.map((entry) => (
+            {salesData.map(entry => (
               <option key={entry.month} value={entry.month}>
                 {entry.month}
               </option>
             ))}
           </select>
-        </div>
+        </label>
 
         {monthData && (
-          <div className="summary-cards">
-            <div className="card card-sales">
-              <h4>Total Sales</h4>
-              <p>${monthData.total.toLocaleString()}</p>
-            </div>
-            <div className="card card-customers">
-              <h4>Customers</h4>
-              <p>{monthData.customers}</p>
-            </div>
-            <div className="card card-profit">
-              <h4>Gross Profit</h4>
-              <p>
-                $
-                {(
-                  monthData.total -
-                  Object.values(monthData.costs).reduce((a, b) => a + b, 0)
-                ).toLocaleString()}
-              </p>
-            </div>
-            <div className="card card-margin">
-              <h4>Margin %</h4>
-              <p>{monthData.marginPercent}%</p>
-            </div>
+          <div className="summary-card">
+            <p><strong>Total Sales</strong></p>
+            <p>${monthData.total.toLocaleString()}</p>
+            <p><strong>Customers</strong></p>
+            <p>{monthData.customers}</p>
+            <p><strong>Gross Profit</strong></p>
+            <p>${Math.round(monthData.total * (monthData.marginPercent / 100)).toLocaleString()}</p>
+            <p><strong>Margin %</strong></p>
+            <p>{monthData.marginPercent}%</p>
           </div>
         )}
 
-        <ClientSpendChart />
+        <ClientSpendChart data={clientData} selectedMonth={selectedMonth} />
+        <TopClients data={clientData} />
       </main>
     </div>
   );
