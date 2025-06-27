@@ -20,7 +20,6 @@
     "date-fns": "^4.1.0",
     "dotenv": "^16.6.0",
     "express": "^5.1.0",
-    "msnodesqlv8": "^4.5.0",
     "mssql": "^11.0.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
