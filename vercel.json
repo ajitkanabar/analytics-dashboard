@@ -1,3 +1,10 @@
 {
-  "buildCommand": "npm install && npm run build"
+  "build": {
+    "env": {
+      "SQL_USER": "@sql-user",
+      "SQL_PASSWORD": "@sql-password",
+      "SQL_SERVER": "@sql-server",
+      "SQL_DATABASE": "@sql-database"
+    }
+  }
 }
