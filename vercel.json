@@ -1,10 +1,10 @@
 {
   "build": {
     "env": {
-      "SQL_USER": "@sql-user",
-      "SQL_PASSWORD": "@sql-password",
-      "SQL_SERVER": "@sql-server",
-      "SQL_DATABASE": "@sql-database"
+      "SQL_USER": "akanabar",
+      "SQL_PASSWORD": "PrintSigns4721!",
+      "SQL_SERVER": "brsqldw",
+      "SQL_DATABASE": "AX2009DataWarehouse"
     }
   }
 }
